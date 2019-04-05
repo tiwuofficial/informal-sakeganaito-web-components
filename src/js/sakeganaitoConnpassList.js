@@ -6,15 +6,15 @@ class SakeganaitoConnpassList extends HTMLElement {
 
     window.callback = (res) => {
       res.events.forEach(data => {
-        const meguroEsConnpassListItem = new SakeganaitoConnpassListItem();
-        meguroEsConnpassListItem.setAttribute('date', new Date(data.started_at).toLocaleDateString());
-        meguroEsConnpassListItem.setAttribute('href', data.event_url);
-        meguroEsConnpassListItem.setAttribute('title', data.title);
-        meguroEsConnpassListItem.setAttribute('owner', data.owner_nickname);
-        meguroEsConnpassListItem.setAttribute('place', data.address);
-        meguroEsConnpassListItem.setAttribute('accepted', data.accepted);
-        meguroEsConnpassListItem.setAttribute('limit', data.limit);
-        shadow.appendChild(meguroEsConnpassListItem);
+        const sakeganaitoConnpassListItem = new SakeganaitoConnpassListItem();
+        sakeganaitoConnpassListItem.setAttribute('date', new Date(data.started_at).toLocaleDateString());
+        sakeganaitoConnpassListItem.setAttribute('href', data.event_url);
+        sakeganaitoConnpassListItem.setAttribute('title', data.title);
+        sakeganaitoConnpassListItem.setAttribute('owner', data.owner_nickname);
+        sakeganaitoConnpassListItem.setAttribute('place', data.address);
+        sakeganaitoConnpassListItem.setAttribute('accepted', data.accepted);
+        sakeganaitoConnpassListItem.setAttribute('limit', data.limit);
+        shadow.appendChild(sakeganaitoConnpassListItem);
       });
     };
 
